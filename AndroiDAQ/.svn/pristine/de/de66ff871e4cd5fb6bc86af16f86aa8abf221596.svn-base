@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:scrollbars="vertical"
+>
+	<TableLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+	>
+		<TableRow
+			android:id="@+id/legend0"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/legendtxt"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center_vertical|right"
+				android:textSize="20dp"
+				android:text="@string/legend" />
+
+			<CheckBox
+			    android:id="@+id/checkBox01"
+			    android:layout_width="wrap_content"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1"
+			    android:clickable="false"
+			    android:enabled="false"
+			    android:text="@string/input"
+			    android:textSize="20dp" />
+
+			<CheckBox
+			    android:id="@+id/checkBox02"
+			    android:layout_width="wrap_content"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1"
+			    android:checked="true"
+			    android:clickable="false"
+			    android:enabled="false"
+			    android:text="@string/output"
+			    android:textSize="20dp" />
+
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/textView1"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="0"
+				android:text="@string/leftbank" />
+			<CheckBox
+				android:id="@+id/p0"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="@string/ch0"
+				android:textSize="12dp" />
+			<CheckBox
+				android:id="@+id/p1"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="@string/ch1"
+				android:textSize="12dp" />
+			<CheckBox
+				android:id="@+id/p2"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="@string/ch2"
+				android:textSize="12dp" />
+			<CheckBox
+				android:id="@+id/p3"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="@string/ch3"
+				android:textSize="12dp" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow2"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/textView2"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="0"
+				android:text="@string/leftbank"
+				android:textColor="#000000" />
+			<CheckBox
+				android:id="@+id/p4"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="@string/ch4"
+				android:textSize="12dp" />
+			<CheckBox
+				android:id="@+id/p5"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="@string/ch5"
+				android:textSize="12dp" />
+			<CheckBox
+				android:id="@+id/p6"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="@string/ch6"
+				android:textSize="12dp" />
+			<CheckBox
+				android:id="@+id/p7"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="@string/ch7"
+				android:textSize="12dp" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow3"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/textView3"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="0"
+				android:text="@string/rightbank" />
+			<CheckBox
+				android:id="@+id/p8"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="@string/ch8"
+				android:textSize="12dp" />
+			<CheckBox
+				android:id="@+id/p9"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="@string/ch9"
+				android:textSize="12dp" />
+			<CheckBox
+				android:id="@+id/p10"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="@string/ch10"
+				android:textSize="12dp" />
+			<CheckBox
+				android:id="@+id/p11"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="@string/ch11"
+				android:textSize="12dp" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow4"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/textView4"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="0"
+				android:text="@string/rightbank"
+				android:textColor="#000000" />
+			<CheckBox
+				android:id="@+id/p12"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="@string/ch12"
+				android:textSize="12dp" />
+			<CheckBox
+				android:id="@+id/p13"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="@string/ch13"
+				android:textSize="12dp" />
+			<CheckBox
+				android:id="@+id/p14"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="@string/ch14"
+				android:textSize="12dp" />
+			<CheckBox
+				android:id="@+id/p15"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="@string/ch15"
+				android:textSize="12dp" />
+		</TableRow>
+
+	    <!--  <TableRow
+	        android:id="@+id/tableRow5"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:gravity="center_horizontal" >
+
+	        <TextView
+	            android:id="@+id/textView5"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_weight="0"
+	            android:text="@string/voltage" />
+
+	        <CheckBox
+	            android:id="@+id/v0"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:checked="true"
+	            android:text="@string/v0"
+	            android:textSize="12dp" />
+
+	        <CheckBox
+	            android:id="@+id/v1"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:checked="true"
+	            android:text="@string/v1"
+	            android:textSize="12dp" />
+
+	        <CheckBox
+	            android:id="@+id/v2"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:checked="true"
+	            android:text="@string/v2"
+	            android:textSize="12dp" />
+
+	        <CheckBox
+	            android:id="@+id/v3"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:checked="true"
+	            android:text="@string/v3"
+	            android:textSize="12dp" />
+	    </TableRow>
+
+	    <TableRow
+	        android:id="@+id/tableRow6"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:gravity="center_horizontal" >
+
+	        <TextView
+	            android:id="@+id/textView6"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_weight="0"
+	            android:text="@string/rightbank"
+	            android:textColor="#000000" />
+
+	        <CheckBox
+	            android:id="@+id/v4"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:checked="true"
+	            android:text="@string/v4"
+	            android:textSize="12dp" />
+
+	        <CheckBox
+	            android:id="@+id/v5"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:checked="true"
+	            android:text="@string/v5"
+	            android:textSize="12dp" />
+
+	        <CheckBox
+	            android:id="@+id/v6"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:checked="true"
+	            android:text="@string/v6"
+	            android:textSize="12dp" />
+
+	        <CheckBox
+	            android:id="@+id/v7"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:checked="true"
+	            android:text="@string/v7"
+	            android:textSize="12dp" />
+
+	    </TableRow>
+
+	    <TableRow
+	        android:id="@+id/legend1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1" >
+
+	        <TextView
+	            android:id="@+id/textView8"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:gravity="center_vertical|right"
+	            android:text="@string/legend" />
+
+	        <CheckBox
+	            android:id="@+id/checkBox03"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:clickable="false"
+	            android:text="@string/notread"
+	            android:textSize="12dp" />
+
+	        <CheckBox
+	            android:id="@+id/checkBox04"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:checked="true"
+	            android:clickable="false"
+	            android:text="@string/read"
+	            android:textSize="12dp" />
+	    </TableRow> -->
+	</TableLayout>
+</ScrollView>

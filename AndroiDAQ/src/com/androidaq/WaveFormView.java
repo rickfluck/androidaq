@@ -1,0 +1,186 @@
+package com.androidaq;
+
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.util.AttributeSet;
+import android.util.Log;
+import android.view.Display;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
+import android.view.WindowManager;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
+
+public class WaveFormView extends SurfaceView implements SurfaceHolder.Callback{
+	
+	private static final String TAG = "BluetoothChat";
+	// plot area size
+	//private final static int WIDTH = 320;
+	//private final static int HEIGHT = 200;
+	
+	private int[] ch1_data;
+	//private static int[] ch2_data = new int[WIDTH];
+	private int ch1_pos = 2047; //HEIGHT/2;
+	//private static int ch2_pos = 140; //HEIGHT/2;
+	
+	private int width;
+	private int height;
+	private int factor = 23;
+	//private int x;
+	private int y;
+	
+	private WaveFormPlotThread plot_thread;
+	private Display display;
+	
+	private Paint ch1_color = new Paint();
+	//private Paint ch2_color = new Paint();
+	private Paint grid_paint = new Paint();
+	private Paint cross_paint = new Paint();
+	private Paint outline_paint = new Paint();
+	
+	private boolean firstRun = true;
+
+	public WaveFormView(Context context, AttributeSet attrs){
+		super(context, attrs);
+		
+		
+		//Log.e(TAG, "ch1_pos: " + String.valueOf(ch1_pos));
+		//Log.e(TAG, "ch1_data[x]: " + String.valueOf(ch1_data[1]));
+		
+		WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+		display = wm.getDefaultDisplay();
+		getHolder().addCallback(this);		
+		
+		final Rect rectangle = new Rect();
+		getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
+		    public void onGlobalLayout() {
+
+		    	//Check if first run so that ch1_data is filled with initial values.
+		    	//Log.i("firstRun", "firstRun " + firstRun);
+		    	if (firstRun) {		
+			        int[] locations = new int[2];
+			        getLocationOnScreen(locations);
+			        //x = locations[0];
+			        y = locations[1];
+			        //Log.i("locations", "locations " + x);
+			        //Log.i("locations", "locations " + y);
+					getWindowVisibleDisplayFrame (rectangle);
+					width = rectangle.width() - 32;
+					height = rectangle.height() - y;
+			        Log.i("RecWidth", "width " + width);
+			        Log.i("Recheight", "height " + height);
+			        ch1_data = new int[width];
+			        // initialize values
+					for(int x = 0; x < width; x++){
+						ch1_data[x] = ch1_pos/factor; // fill array once with values of ch1_pos scaled for 1-4095 (ADC values)
+						//ch2_data[x] = ch2_pos;
+					} 
+					firstRun = false;
+		    	}
+		    }
+		});
+		
+		plot_thread = new WaveFormPlotThread(getHolder(), this);
+		
+		ch1_color.setColor(Color.RED);
+		//ch2_color.setColor(Color.RED);
+		ch1_color.setStrokeWidth(2);
+		grid_paint.setColor(Color.rgb(5, 160, 50));
+		cross_paint.setColor(Color.rgb(70, 100, 70));
+		outline_paint.setColor(Color.GREEN);
+	}
+	
+	@Override
+	public void surfaceChanged(SurfaceHolder holder, int format, int width, int height){
+		
+	}
+	
+	@Override
+	public void surfaceCreated(SurfaceHolder holder){
+		plot_thread.setRunning(true);
+		plot_thread.start();
+	}
+	
+	@Override
+	public void surfaceDestroyed(SurfaceHolder holder){
+		boolean retry = true;
+		plot_thread.setRunning(false);
+		while (retry){
+			try{
+				plot_thread.join();
+				retry = false;
+			}catch(InterruptedException e){
+				
+			}
+		}
+	}
+	@Override
+	public void onDraw(Canvas canvas){
+		//Log.i(TAG, "ch1_data[x]: " + Integer.toString(ch1_data[1]));
+		PlotPoints(canvas);
+	}
+	
+	public void set_data(int[] data1){
+		
+		
+		
+		plot_thread.setRunning(false);
+		
+		for(int x=0; x<width; x++){
+			// channel 1
+			if(x<(data1.length)){
+				data1[x] = data1[x]/factor; //Scaled for ADC 1-4096
+				ch1_data[x] = height-data1[x]+1;
+			}else{
+				ch1_data[x] = ch1_pos/factor; //To scale if not long enough
+			}
+			// channel 2
+			//if(x<(data1.length)){
+				//ch2_data[x] = HEIGHT-data2[x]+1;
+			//}else{
+				//ch2_data[x] = ch2_pos;
+			//}
+		}
+		plot_thread.setRunning(true);
+	}
+	
+	public void PlotPoints(Canvas canvas){
+		// clear screen
+		canvas.drawColor(Color.rgb(20, 20, 20));
+		// draw vertical grids
+	    for(int vertical = 1; vertical<10; vertical++){
+	    	canvas.drawLine(
+	    			vertical*(width/10)+1, 1,
+	    			vertical*(width/10)+1, height+1,
+	    			grid_paint);
+	    }
+	    // draw horizontal grids
+	    for(int horizontal = 1; horizontal<10; horizontal++){
+	    	canvas.drawLine(
+	    			1, horizontal*(height/10)+1,
+	    			width+1, horizontal*(height/10)+1,
+	    			grid_paint);
+	    }
+	    // draw outline
+ 		canvas.drawLine(0, 0, (width + 1), 0, outline_paint);	// top
+ 		canvas.drawLine((width + 1), 0, (width + 1), (height + 1), outline_paint); //right
+ 		canvas.drawLine(0, (height+1), (width + 1), (height + 1), outline_paint); // bottom
+ 		canvas.drawLine(0, 0, 0, (height+1), outline_paint); //left
+ 		canvas.drawLine((width/2) - 2, 0, (width/2) -2, (height + 1), outline_paint);//center
+ 		for(int horizontal = 1; horizontal<30; horizontal++){
+	    	canvas.drawLine(width/2 - 5, horizontal*(height/30) + 1,width/2 + 2, horizontal*(height/30) + 1,
+	    			outline_paint);
+	    }
+ 		
+ 		// plot data
+ 		//Log.i("PlotPoints", "ch1_data.length is: " +  (ch1_data.length - 1));
+		for(int x = 0; x < ch1_data.length - 1; x++){			
+			//canvas.drawLine(x+1, ch2_data[x], x+2, ch2_data[x+1], ch2_color);
+			canvas.drawLine(x+1, ch1_data[x], x+2, ch1_data[x+1], ch1_color);
+		} 
+	}
+}
+
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:gravity="center_vertical|center_horizontal"
+	android:orientation="horizontal"
+>
+	<TableRow
+		android:id="@+id/tableRow1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+	>
+		<Button
+			android:id="@+id/button1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Forward" />
+	</TableRow>
+	<TableRow
+		android:id="@+id/tableRow2"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+	>
+		<Button
+			android:id="@+id/button2"
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="0"
+			android:text="Left" />
+		<Button
+			android:id="@+id/button3"
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="0"
+			android:text="Button"
+			android:visibility="invisible" />
+		<Button
+			android:id="@+id/button4"
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="0"
+			android:text="Right" />
+	</TableRow>
+	<TableRow
+		android:id="@+id/tableRow3"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+	>
+		<Button
+			android:id="@+id/button5"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Reverse" />
+	</TableRow>
+
+	<TableRow
+	    android:id="@+id/tableRow4"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="30dp"
+	    android:gravity="center_horizontal" >
+
+		<SeekBar
+		    android:id="@+id/seekBar1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:max="100" />
+
+	</TableRow>
+</TableLayout>

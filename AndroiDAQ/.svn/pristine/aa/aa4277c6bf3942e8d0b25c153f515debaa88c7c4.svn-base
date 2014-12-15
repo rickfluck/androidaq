@@ -1,0 +1,101 @@
+package com.androidaq;
+
+
+import android.os.Parcel;
+import android.os.Parcelable;
+ 
+public class SaveStates implements Parcelable
+{
+    private boolean[] isOutputCh;
+    //private boolean[] readVoltage;
+    private boolean[] isDigCh;
+    private boolean[] outputState;
+    private String[] desiredFreq;
+ 
+    public static Parcelable.Creator<SaveStates> CREATOR =
+        new Parcelable.Creator<SaveStates>()
+    {
+ 
+        @Override
+        public SaveStates createFromParcel( Parcel source )
+        {
+            int size = source.readInt();
+            
+            boolean[] isOutputCh = new boolean[ size ];
+            //boolean[] readVoltage = new boolean[ size ];
+            boolean[] isDigCh = new boolean[ size ];
+            boolean[] outputState = new boolean[ size ];
+            String[] desiredFreq = new String[ size];
+            
+            source.readBooleanArray( isOutputCh );
+            //source.readBooleanArray(readVoltage);
+            source.readBooleanArray(isDigCh);
+            source.readBooleanArray(outputState);
+            source.readStringArray(desiredFreq);
+            
+            //return new SaveStates( isOutputCh, readVoltage, isDigCh, outputState, desiredFreq );
+            return new SaveStates( isOutputCh, isDigCh, outputState, desiredFreq );
+        }
+ 
+        @Override
+        public SaveStates[] newArray( int size )
+        {
+            return new SaveStates[ size ];
+        }
+    };
+    //public SaveStates( boolean[] isOutputCh, boolean[] readVoltage, boolean[] isDigCh, boolean[] outputState, String[] desiredFreq )
+    public SaveStates( boolean[] isOutputCh, boolean[] isDigCh, boolean[] outputState, String[] desiredFreq )
+    {
+        this.isOutputCh = isOutputCh;
+        //this.readVoltage = readVoltage;
+        this.isDigCh = isDigCh;
+        this.outputState = outputState;
+        this.desiredFreq = desiredFreq;
+    }
+ 
+    @Override
+    public int describeContents()
+    {
+        return 0;
+    }
+ 
+    @Override
+    public void writeToParcel( Parcel dest, int flags )
+    {
+        dest.writeInt( isOutputCh.length );
+        dest.writeBooleanArray( isOutputCh );
+        
+        //dest.writeInt( readVoltage.length );
+        //dest.writeBooleanArray( readVoltage );
+        
+        dest.writeInt( isDigCh.length );
+        dest.writeBooleanArray( isDigCh );
+        
+        dest.writeInt( outputState.length );
+        dest.writeBooleanArray( outputState );
+        
+        dest.writeInt( desiredFreq.length );
+        dest.writeArray( desiredFreq );
+    }
+ 
+    public boolean[] getisOutputCh()
+    {
+        return isOutputCh;
+    }
+   /* public boolean[] getreadVoltage()
+    {
+        return readVoltage;
+    } */
+    public boolean[] getisDigCh()
+    {
+        return isDigCh;
+    }
+    public boolean[] getoutputState()
+    {
+        return outputState;
+    }
+    public String[] getdesiredFreq()
+    {
+        return desiredFreq;
+    }
+}

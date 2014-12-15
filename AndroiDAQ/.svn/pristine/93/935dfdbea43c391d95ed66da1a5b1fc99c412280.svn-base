@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" > 
+<ScrollView
+	android:id="@+id/scrollViewInputs"
+	android:layout_width="fill_parent"
+	android:layout_height="match_parent"
+	android:layout_marginBottom="50dp"
+	android:scrollbars="vertical"
+>
+	<TableLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+	>
+		<TableRow
+			android:id="@+id/inputsRow0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal|left"
+		>
+			<TextView
+				android:id="@+id/channelText0"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center|left"
+				android:paddingLeft="15dp"
+				android:text="@string/channel" />
+			<TextView
+				android:id="@+id/channelText1"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center|left"
+				android:text="@string/input_type" />
+			<TextView
+				android:id="@+id/channelText2"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center|left"
+				android:text="@string/input_reading" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/inputsRow1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/ch_num0"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/ch0" />
+			<RadioGroup
+				android:id="@+id/radioGroup0"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+			>
+				<RadioButton
+					android:id="@+id/digital0"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:checked="true"
+					android:text="@string/digital"
+					android:textSize="12sp" />
+				<RadioButton
+					android:id="@+id/count0"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:text="@string/count"
+					android:textSize="12sp" />
+			</RadioGroup>
+			<RadioButton
+				android:id="@+id/hi_low0"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:clickable="false"
+				android:saveEnabled="false"
+				android:textSize="12sp"
+				android:text="@string/hilow" />
+			<TextView
+				android:id="@+id/input_freq0"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/freqhint"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/infreq_label0"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/hz"
+				android:singleLine="true" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/inputsRow2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/ch_num1"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/ch1" />
+			<RadioGroup
+				android:id="@+id/radioGroup1"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+			>
+				<RadioButton
+					android:id="@+id/digital1"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:checked="true"
+					android:text="@string/digital"
+					android:textSize="12sp" />
+				<RadioButton
+					android:id="@+id/count1"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:text="@string/count"
+					android:textSize="12sp" />
+			</RadioGroup>
+			<RadioButton
+				android:id="@+id/hi_low1"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:clickable="false"
+				android:saveEnabled="false"
+				android:textSize="12sp"
+				android:text="@string/hilow" />
+			<TextView
+				android:id="@+id/input_freq1"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/freqhint"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/infreq_label1"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/hz"
+				android:singleLine="true" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/inputsRow3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/ch_num2"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/ch2" />
+			<RadioGroup
+				android:id="@+id/radioGroup2"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+			>
+				<RadioButton
+					android:id="@+id/digital2"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:checked="true"
+					android:text="@string/digital"
+					android:textSize="12sp" />
+				<RadioButton
+					android:id="@+id/count2"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:text="@string/count"
+					android:textSize="12sp" />
+			</RadioGroup>
+			<RadioButton
+				android:id="@+id/hi_low2"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:clickable="false"
+				android:saveEnabled="false"
+				android:textSize="12sp"
+				android:text="@string/hilow" />
+			<TextView
+				android:id="@+id/input_freq2"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/freqhint"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/infreq_label2"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/hz"
+				android:singleLine="true" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/inputsRow4"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/ch_num3"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/ch3" />
+			<RadioGroup
+				android:id="@+id/radioGroup3"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+			>
+				<RadioButton
+					android:id="@+id/digital3"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:checked="true"
+					android:text="@string/digital"
+					android:textSize="12sp" />
+				<RadioButton
+					android:id="@+id/count3"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:text="@string/count"
+					android:textSize="12sp" />
+			</RadioGroup>
+			<RadioButton
+				android:id="@+id/hi_low3"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:clickable="false"
+				android:textSize="12sp"
+				android:text="@string/hilow" />
+			<TextView
+				android:id="@+id/input_freq3"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/freqhint"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/infreq_label3"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/hz"
+				android:singleLine="true" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/inputsRow5"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/ch_num4"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/ch4" />
+			<RadioGroup
+				android:id="@+id/radioGroup4"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+			>
+				<RadioButton
+					android:id="@+id/digital4"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:checked="true"
+					android:text="@string/digital"
+					android:textSize="12sp" />
+				<RadioButton
+					android:id="@+id/count4"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:text="@string/count"
+					android:textSize="12sp" />
+			</RadioGroup>
+			<RadioButton
+				android:id="@+id/hi_low4"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:clickable="false"
+				android:textSize="12sp"
+				android:text="@string/hilow" />
+			<TextView
+				android:id="@+id/input_freq4"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/freqhint"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/infreq_label4"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/hz"
+				android:singleLine="true" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/inputsRow6"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/ch_num5"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/ch5" />
+			<RadioGroup
+				android:id="@+id/radioGroup5"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+			>
+				<RadioButton
+					android:id="@+id/digital5"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:checked="true"
+					android:text="@string/digital"
+					android:textSize="12sp" />
+				<RadioButton
+					android:id="@+id/count5"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:text="@string/count"
+					android:textSize="12sp" />
+			</RadioGroup>
+			<RadioButton
+				android:id="@+id/hi_low5"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:clickable="false"
+				android:textSize="12sp"
+				android:text="@string/hilow" />
+			<TextView
+				android:id="@+id/input_freq5"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/freqhint"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/infreq_label5"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/hz"
+				android:singleLine="true" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/inputsRow7"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/ch_num6"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/ch6" />
+			<RadioGroup
+				android:id="@+id/radioGroup6"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+			>
+				<RadioButton
+					android:id="@+id/digital6"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:checked="true"
+					android:text="@string/digital"
+					android:textSize="12sp" />
+				<RadioButton
+					android:id="@+id/count6"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:text="@string/count"
+					android:textSize="12sp" />
+			</RadioGroup>
+			<RadioButton
+				android:id="@+id/hi_low6"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:clickable="false"
+				android:textSize="12sp"
+				android:text="@string/hilow" />
+			<TextView
+				android:id="@+id/input_freq6"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/freqhint"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/infreq_label6"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/hz"
+				android:singleLine="true" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/inputsRow8"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/ch_num7"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/ch7" />
+			<RadioGroup
+				android:id="@+id/radioGroup7"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+			>
+				<RadioButton
+					android:id="@+id/digital7"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:checked="true"
+					android:text="@string/digital"
+					android:textSize="12sp" />
+				<RadioButton
+					android:id="@+id/count7"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:text="@string/count"
+					android:textSize="12sp" />
+			</RadioGroup>
+			<RadioButton
+				android:id="@+id/hi_low7"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:clickable="false"
+				android:textSize="12sp"
+				android:text="@string/hilow" />
+			<TextView
+				android:id="@+id/input_freq7"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/freqhint"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/infreq_label7"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/hz"
+				android:singleLine="true" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/inputsRow9"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/ch_num8"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/ch8" />
+			<RadioGroup
+				android:id="@+id/radioGroup8"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+			>
+				<RadioButton
+					android:id="@+id/digital8"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:checked="true"
+					android:text="@string/digital"
+					android:textSize="12sp" />
+				<RadioButton
+					android:id="@+id/count8"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:text="@string/count"
+					android:textSize="12sp" />
+			</RadioGroup>
+			<RadioButton
+				android:id="@+id/hi_low8"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:clickable="false"
+				android:textSize="12sp"
+				android:text="@string/hilow" />
+			<TextView
+				android:id="@+id/input_freq8"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/freqhint"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/infreq_label8"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/hz"
+				android:singleLine="true" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/inputsRow10"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/ch_num9"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/ch9" />
+			<RadioGroup
+				android:id="@+id/radioGroup9"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+			>
+				<RadioButton
+					android:id="@+id/digital9"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:checked="true"
+					android:text="@string/digital"
+					android:textSize="12sp" />
+				<RadioButton
+					android:id="@+id/count9"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:text="@string/count"
+					android:textSize="12sp" />
+			</RadioGroup>
+			<RadioButton
+				android:id="@+id/hi_low9"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:clickable="false"
+				android:textSize="12sp"
+				android:text="@string/hilow" />
+			<TextView
+				android:id="@+id/input_freq9"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/freqhint"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/infreq_label9"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/hz"
+				android:singleLine="true" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/inputsRow11"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/ch_num10"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/ch10" />
+			<RadioGroup
+				android:id="@+id/radioGroup10"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+			>
+				<RadioButton
+					android:id="@+id/digital10"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:checked="true"
+					android:text="@string/digital"
+					android:textSize="12sp" />
+				<RadioButton
+					android:id="@+id/count10"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:text="@string/count"
+					android:textSize="12sp" />
+			</RadioGroup>
+			<RadioButton
+				android:id="@+id/hi_low10"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:clickable="false"
+				android:textSize="12sp"
+				android:text="@string/hilow" />
+			<TextView
+				android:id="@+id/input_freq10"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/freqhint"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/infreq_label10"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/hz"
+				android:singleLine="true" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/inputsRow12"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/ch_num11"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/ch11" />
+			<RadioGroup
+				android:id="@+id/radioGroup11"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+			>
+				<RadioButton
+					android:id="@+id/digital11"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:checked="true"
+					android:text="@string/digital"
+					android:textSize="12sp" />
+				<RadioButton
+					android:id="@+id/count11"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:text="@string/count"
+					android:textSize="12sp" />
+			</RadioGroup>
+			<RadioButton
+				android:id="@+id/hi_low11"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:clickable="false"
+				android:textSize="12sp"
+				android:text="@string/hilow" />
+			<TextView
+				android:id="@+id/input_freq11"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/freqhint"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/infreq_label11"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/hz"
+				android:singleLine="true" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/inputsRow13"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/ch_num12"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/ch12" />
+			<RadioGroup
+				android:id="@+id/radioGroup12"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+			>
+				<RadioButton
+					android:id="@+id/digital12"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:checked="true"
+					android:text="@string/digital"
+					android:textSize="12sp" />
+				<RadioButton
+					android:id="@+id/count12"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:text="@string/count"
+					android:textSize="12sp" />
+			</RadioGroup>
+			<RadioButton
+				android:id="@+id/hi_low12"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:clickable="false"
+				android:textSize="12sp"
+				android:text="@string/hilow" />
+			<TextView
+				android:id="@+id/input_freq12"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/freqhint"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/infreq_label12"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/hz"
+				android:singleLine="true" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/inputsRow14"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/ch_num13"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/ch13" />
+			<RadioGroup
+				android:id="@+id/radioGroup13"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+			>
+				<RadioButton
+					android:id="@+id/digital13"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:checked="true"
+					android:text="@string/digital"
+					android:textSize="12sp" />
+				<RadioButton
+					android:id="@+id/count13"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:text="@string/count"
+					android:textSize="12sp" />
+			</RadioGroup>
+			<RadioButton
+				android:id="@+id/hi_low13"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:clickable="false"
+				android:textSize="12sp"
+				android:text="@string/hilow" />
+			<TextView
+				android:id="@+id/input_freq13"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/freqhint"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/infreq_label13"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/hz"
+				android:singleLine="true" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/inputsRow15"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/ch_num14"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/ch14" />
+			<RadioGroup
+				android:id="@+id/radioGroup14"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+			>
+				<RadioButton
+					android:id="@+id/digital14"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:checked="true"
+					android:text="@string/digital"
+					android:textSize="12sp" />
+				<RadioButton
+					android:id="@+id/count14"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:text="@string/count"
+					android:textSize="12sp" />
+			</RadioGroup>
+			<RadioButton
+				android:id="@+id/hi_low14"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:clickable="false"
+				android:textSize="12sp"
+				android:text="@string/hilow" />
+			<TextView
+				android:id="@+id/input_freq14"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/freqhint"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/infreq_label14"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/hz"
+				android:singleLine="true" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/inputsRow16"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+		>
+			<TextView
+				android:id="@+id/ch_num15"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/ch15" />
+			<RadioGroup
+				android:id="@+id/radioGroup15"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+			>
+				<RadioButton
+					android:id="@+id/digital15"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:checked="true"
+					android:text="@string/digital"
+					android:textSize="12sp" />
+				<RadioButton
+					android:id="@+id/count15"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0"
+					android:text="@string/count"
+					android:textSize="12sp" />
+			</RadioGroup>
+			<RadioButton
+				android:id="@+id/hi_low15"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:clickable="false"
+				android:textSize="12sp"
+				android:text="@string/hilow" />
+			<TextView
+				android:id="@+id/input_freq15"
+				android:layout_width="100dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/freqhint"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/infreq_label15"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:hint="@string/hz"
+				android:singleLine="true" />
+		</TableRow>
+	</TableLayout>
+</ScrollView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="right"
+    android:layout_marginTop="-50dp"
+    android:weightSum="1" >
+
+        <Button
+            android:id="@+id/read_inputs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/readinputs" />
+</LinearLayout>
+</LinearLayout>

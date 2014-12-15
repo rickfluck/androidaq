@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" > 
+<ScrollView
+	android:id="@+id/scrollViewVolts"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:layout_marginBottom="50dp"
+	android:scrollbars="vertical"
+>
+
+	<TableLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+
+	    <TableRow
+	        android:id="@+id/voltagesRow1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical|center_horizontal" >
+
+	        <TextView
+	            android:id="@+id/label1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/v0"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/voltageReading1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:gravity="right"
+	            android:hint="@string/volthint"
+	            android:paddingLeft="15dp"
+	            android:paddingRight="15dp"
+	            android:singleLine="true"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/textView1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/volts"
+	            android:textSize="20sp" />
+	    </TableRow>
+
+	    <TableRow
+	        android:id="@+id/voltagesRow2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical|center_horizontal" >
+
+	        <TextView
+	            android:id="@+id/label2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/v1"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/voltageReading2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:gravity="right"
+	            android:hint="@string/volthint"
+	            android:paddingLeft="15dp"
+	            android:paddingRight="15dp"
+	            android:singleLine="true"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/textView2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/volts"
+	            android:textSize="20sp" />
+	    </TableRow>
+
+	    <TableRow
+	        android:id="@+id/voltagesRow3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical|center_horizontal" >
+
+	        <TextView
+	            android:id="@+id/label3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/v2"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/voltageReading3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:gravity="right"
+	            android:hint="@string/volthint"
+	            android:paddingLeft="15dp"
+	            android:paddingRight="15dp"
+	            android:singleLine="true"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/textView3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/volts"
+	            android:textSize="20sp" />
+	    </TableRow>
+
+	    <TableRow
+	        android:id="@+id/voltagesRow4"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical|center_horizontal" >
+
+	        <TextView
+	            android:id="@+id/label4"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/v3"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/voltageReading4"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:gravity="right"
+	            android:hint="@string/volthint"
+	            android:paddingLeft="15dp"
+	            android:paddingRight="15dp"
+	            android:singleLine="true"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/textView4"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/volts"
+	            android:textSize="20sp" />
+	    </TableRow>
+
+	    <TableRow
+	        android:id="@+id/voltagesRow5"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical|center_horizontal" >
+
+	        <TextView
+	            android:id="@+id/label5"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/v4"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/voltageReading5"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:gravity="right"
+	            android:hint="@string/volthint"
+	            android:paddingLeft="15dp"
+	            android:paddingRight="15dp"
+	            android:singleLine="true"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/textView5"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/volts"
+	            android:textSize="20sp" />
+	    </TableRow>
+
+	    <TableRow
+	        android:id="@+id/voltagesRow6"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical|center_horizontal" >
+
+	        <TextView
+	            android:id="@+id/label6"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/v5"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/voltageReading6"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:gravity="right"
+	            android:hint="@string/volthint"
+	            android:paddingLeft="15dp"
+	            android:paddingRight="15dp"
+	            android:singleLine="true"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/textView6"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/volts"
+	            android:textSize="20sp" />
+	    </TableRow>
+
+	    <TableRow
+	        android:id="@+id/voltagesRow7"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical|center_horizontal" >
+
+	        <TextView
+	            android:id="@+id/label7"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/v6"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/voltageReading7"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:gravity="right"
+	            android:hint="@string/volthint"
+	            android:paddingLeft="15dp"
+	            android:paddingRight="15dp"
+	            android:singleLine="true"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/textView7"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/volts"
+	            android:textSize="20sp" />
+	    </TableRow>
+
+	    <TableRow
+	        android:id="@+id/voltagesRow8"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical|center_horizontal" >
+
+	        <TextView
+	            android:id="@+id/label8"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/v7"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/voltageReading8"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:gravity="right"
+	            android:hint="@string/volthint"
+	            android:paddingLeft="15dp"
+	            android:paddingRight="15dp"
+	            android:singleLine="true"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/textView8"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/volts"
+	            android:textSize="20sp" />
+	    </TableRow>
+	</TableLayout>
+
+</ScrollView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="-50dp">
+
+        <Button
+            android:id="@+id/read_volts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:text="@string/readvolts" />
+        <Button
+            android:id="@+id/read_cont_volts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:text="@string/readcontvolts" />
+</LinearLayout>
+</LinearLayout> 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:focusableInTouchMode="true"
+>
+	<ListView
+		android:id="@+id/log_in"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="70dp"
+		android:layout_marginRight="70dp"
+		android:textSize="12dp"
+		android:layout_weight="1"
+		android:divider="@color/black"
+		android:headerDividersEnabled="false"
+		android:scrollbars="vertical"
+		android:scrollbarAlwaysDrawVerticalTrack="true"
+		android:fadeScrollbars="false"
+		android:scrollbarSize="35dp"
+		android:scrollbarStyle="insideInset"
+		android:scrollingCache="true" android:transcriptMode="disabled"/>
+</LinearLayout>

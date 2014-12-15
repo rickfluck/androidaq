@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<color name="project_current">#09F911</color>
+	<color name="black">#000000</color>
+	<color name="menu_text">#FFFFFF</color>
+	<color name="gray">#C0C0C0</color>
+	<color name ="background">#000000</color>
+	<color name="clicked">#FF8C00</color>
+	<color name="orange1">#DDFFA500</color>
+	<color name="coral">#DDFF7F00</color>
+	<color name="grey16">#DD292929</color>
+	<color name="orange4">#DD8B5A00</color>
+	<color name="orange5">#DDFA8072</color>
+	<color name="black1">#DD000000</color>
+	<color name="grey26">#DD424242</color>
+	<color name="links">#FF4040</color>
+	</resources>
