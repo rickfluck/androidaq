@@ -1,7 +1,7 @@
-androidaq
+<a href="url"><img src="https://github.com/rickfluck/androidaq/blob/master/AndroiDAQxBee.jpg" align="left" height="228" width="320" ></a>
 =========
 
-Android, LabVIEW, Java, Python and other language snippets and applications for the AndroiDAQ wireless data acquisition module.
+Android, LabVIEW, Java, Python and other language snippets and applications for the AndroiDAQ wireless data acquisition module. Fully tested and operational. Includes snippets for serial communications and data acquistion for digital, analog, and frequency.
 
 The Android source is for the AndroiDAQ DEMO Android application, which is available on Google Play at: https://play.google.com/store/apps/details?id=com.androidaq&hl=en
 
